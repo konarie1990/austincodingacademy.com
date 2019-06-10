@@ -168,7 +168,7 @@
 
 
   <!-- Filters -->
-  {% unless include.marketing %}
+  {% unless include.marketing or site.key == 'lubbock' %}
   <h4 class="pt-5">Filters</h4>
   <div class="d-flex flex-row justify-content-around pb-5">
     <!-- Location -->
