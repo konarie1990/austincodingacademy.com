@@ -76,18 +76,12 @@ lubbock_footer:
 - weight: 6
   title: Student Grievance Policy
   url: "/student-grievances"
-- weight: 5
-  title: Student Referral
-  url: "/new-student-referral"
 - weight: 4
-  title: Hire a Graduate
-  url: "/hire"
-- weight: 3
   title: Become an Instructor
   url: "/instructor-apply"
 - weight: 2
-  title: Tutoring
-  url: "/tutoring"
+  title: Upcoming Events
+  url: "/events"
 - weight: 1
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
@@ -116,8 +110,13 @@ austin_footer:
   title: Become an Instructor
   url: "/instructor-apply"
 - weight: 3
+<<<<<<< HEAD
   title: Tutoring
   url: "/tutoring"
+=======
+  title: Upcoming Events
+  url: "/events"
+>>>>>>> master
 - weight: 2
   title: Hack Overflow
   url: https://austincodingacademy.com/forum
