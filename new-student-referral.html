@@ -77,14 +77,14 @@ lubbock:
 <div class="container mw-850 mt-90 pt-1 pb-5">
   <div class="my-10">
     <h1 class="text-center font-family-alt font-weight-bold display-5 mb-4">
-      {{ site.key | capitalize }} Coding Academy <br>
+      {{ site.key | capitalize }} Coding Academy<br>
       New Student Referrals
     </h1>
     <h2 class="text-center display-7">
       Earn {{ school.referral_amount }} each for you and a friend when they become a student of {{ site.key | capitalize }} Coding Academy
     </h2>
   </div>
-  <div class="w-75 mx-auto mb-6">
+  <div class="w-100 w-sm-75 mx-auto mb-6">
     <amp-img
       height="400px"
       width="600px"
@@ -93,16 +93,16 @@ lubbock:
       alt="Passion Led Us Here"
     ></amp-img>
   </div>
-  <p class="mt-6 mb-10 pt-4">
+  <p class="mt-6 mb-10 pt-4 px-2 p-sm-0 mx-auto">
     {{ school.description }}
   </p>
   <!-- Start Questions -->
   {% for item in school.faq %}
     <div class="mb-8">
-      <h2 class="font-family-alt font-weight-bold display-6 mb-4">
+      <h2 class="mx-auto mx-sm-0 text-center text-sm-left font-family-alt font-weight-bold display-6 mb-4">
         {{ item.question }}
       </h2>
-      <p>
+      <p class="px-2 p-sm-0 mx-auto">
         {{ item.text }}
       </p>
     </div>
@@ -111,10 +111,10 @@ lubbock:
   </p>
   <!-- Rules -->
   <div class="mb-8">
-    <h2 class="font-family-alt font-weight-bold display-6 mb-4">
+    <h2 class="mx-auto mx-sm-0 text-center text-sm-left font-family-alt font-weight-bold display-6 mb-4">
       What Are The Rules?
     </h2>
-    <p>
+    <p class="px-2 p-sm-0 mx-auto">
       Here are the key things you need to know about how our referral program works:
     </p>
     <ul>
@@ -125,10 +125,10 @@ lubbock:
   </div>
   <!-- End Rules -->
   <div class="mb-8">
-    <h2 class="font-family-alt font-weight-bold display-6 mb-4">
+    <h2 class="mx-auto mx-sm-0 text-center text-sm-left font-family-alt font-weight-bold display-6 mb-4">
       Questions?
     </h2>
-    <p>
+    <p class="px-2 p-sm-0 mx-auto">
       Have additional questions about the Referral Program? Email <a href="info@{{ site.key }}codingacademy.com" rel="noopener" target="_blank">info@{{ site.key }}codingacademy.com</a>
       with the subject line “Referral Program” with your question, and a member of the {{ site.acronym | upcase }} team will get back to you with an answer!
     </p>
