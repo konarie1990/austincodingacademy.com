@@ -2,6 +2,10 @@
 layout: default
 permalink: "/"
 amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel', 'amp-lightbox', 'amp-video', 'amp-youtube']
+cover_video:
+  src: "/assets/videos/aca-intro.webm"
+  src_mp4: "/assets/videos/aca-intro.mp4"
+  title: 'ACA Cover Video'
 lightbox_youtube:
   src_id: "n4x3bdW-kq8"
   title: 'Karen Davis ACA Testimonial'
@@ -74,7 +78,7 @@ logos:
 austin:
   title: Austin Coding Academy | Learn to Code, Change Your Life
   img: "/assets/images/hero-index.jpg"
-  hero: index
+  hero: filter
   description: At Austin Coding Academy, we fit learning to code into your life with
     a flexible &amp; affordable array of options, all taught by current industry professionals.
     Don’t wait - embark on a new career today!
@@ -194,18 +198,44 @@ lubbock:
   form_guid: c34e4ad8-2fe9-49d1-aaba-c8d77f294986
 ---
 
-{% assign city = page[site.key] %}
-<!-- htmllint preset="none" -->
-<div id="hero-{{ city.hero }}" class="hero">
-<!-- htmllint preset="$previous" -->
-  <div class="py-7 py-md-11 container">
+{% assign school = page[site.key] %}
+<div id="video-container" class="position-relative">
+  <!-- htmllint preset="none" -->
+  <div id="hero-{{ school.hero }}" class="hero position-absolute w-100" style="z-index: 50; top: 0;"></div>
+  <!-- htmllint preset="$previous" -->
+
+  <!-- Cover Video -->
+  {% assign video = page.cover_video %}
+  <amp-video
+    width="640"
+    height="360"
+    layout="responsive"
+    poster=""
+    autoplay
+    loop
+    title="{{ video.title }}"
+  >
+    <source
+      src="{{ video.src }}"
+      type="video/webm"
+    />
+    <source
+      src="{{ video.src_mp4 }}"
+      type="video/mp4"
+    />
+    <div fallback>
+      <p>This browser does not support the video element.</p>
+    </div>
+  </amp-video>
+
+  <div class="py-7 py-md-11 container position-absolute" style="z-index: 100; top: 20%; left: 50px;">
     <div class="col-8 col-md-7 col-lg-6 pl-0">
       <div class="my-11"></div>
       <h1 class="text-white font-family-alt font-weight-bold display-responsive">
-        {{ city.heading }}
+        {{ school.heading }}
       </h1>
       <p class="text-white mt-4 mb-3 line-typewriter anim-typewriter">
-        {{ city.subheading }}
+        {{ school.subheading }}
       </p>
       <div class="d-flex justify-content-start">
         <button
@@ -227,7 +257,7 @@ lubbock:
         >
           <div class="mt-11 pt-5 d-flex mx-auto flex-column align-items-center">
             <a class="my-5 btn btn-light btn-round mr-2 d-sm-none"
-              href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType={{ city.appt_type }}"
+              href="https://app.acuityscheduling.com/schedule.php?owner=11951420&appointmentType={{ school.appt_type }}"
               target="_blank"
               rel="noopener"
             >
@@ -237,7 +267,7 @@ lubbock:
               OR
             </h4>
             <a class="my-5 btn btn-light btn-round mr-2 d-sm-none"
-              href="tel:{{ city.phone }}"
+              href="tel:{{ school.phone }}"
             >
               Call Us Now!
             </a>
@@ -283,8 +313,7 @@ lubbock:
               </div>
             </amp-youtube>
           </div>
-        </amp-lightbox
-        data-videoid="mGENRKrdoGY">
+        </amp-lightbox>
       </div>
     </div>
   </div>
@@ -325,7 +354,7 @@ lubbock:
         Here's how:
       </p>
       <div>
-        {% for feature in city.features %}
+        {% for feature in school.features %}
           <div class="col-12">
             <div class="row d-flex justify-content-center align-items-center">
               <!-- Image -->
@@ -386,7 +415,7 @@ lubbock:
       <!-- begin student-stories -->
       <div class="container">
         <div class="row">
-          {% for story in city.stories %}
+          {% for story in school.stories %}
             <div class="col-xs-12 col-sm-12 col-md-6">
               <div class="mt-4">
                 <amp-iframe

@@ -212,10 +212,6 @@ body, p {
 
 /* HEADER LINKS */
 
-#header-background {
-  opacity: 0;
-}
-
 .nav-item a:hover, #sidebar a:hover, .cta-gradient:hover {
   color: #ffffff;
   cursor: pointer;
@@ -263,6 +259,17 @@ body, p {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+}
+
+#video-container {
+  overflow: hidden;
+  max-height: 78vh;
+}
+
+/* filter over video */
+#hero-filter {
+  background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7));
+  opacity: 0.8;
 }
 
 #hero-index {
