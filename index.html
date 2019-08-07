@@ -2,12 +2,10 @@
 layout: default
 permalink: "/"
 amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel', 'amp-lightbox', 'amp-video', 'amp-youtube']
-lightbox_story:
-  src: "/assets/videos/KarenDavis_ACA_Testimonial.mp4"
-  title: 'Karen Davis ACA Testimonial'
 lightbox_youtube:
   src_id: "n4x3bdW-kq8"
   title: 'Karen Davis ACA Testimonial'
+  src_mp4: "/assets/videos/KarenDavis_ACA_Testimonial.mp4"
 logos:
 - width: 1600px
   height: 1600px
@@ -279,7 +277,10 @@ lubbock:
               layout="responsive"
               title="{{ testimonial.title }}"
             >
-              <source src="{{ testimonial.src }}" type="video/mp4"/>
+              <source src="{{ testimonial.src_mp4 }}" type="video/mp4"/>
+              <div fallback>
+                <p>This browser does not support the video element.</p>
+              </div>
             </amp-youtube>
           </div>
         </amp-lightbox
