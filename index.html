@@ -1,10 +1,13 @@
 ---
 layout: default
 permalink: "/"
-amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel', 'amp-lightbox', 'amp-video']
+amp_components: ['amp-animation', 'amp-position-observer', 'amp-carousel', 'amp-lightbox', 'amp-video', 'amp-youtube']
 lightbox_story:
   src: "/assets/videos/KarenDavis_ACA_Testimonial.mp4"
-  title: 'Karen David ACA Testimonial'
+  title: 'Karen Davis ACA Testimonial'
+lightbox_youtube:
+  src_id: "n4x3bdW-kq8"
+  title: 'Karen Davis ACA Testimonial'
 logos:
 - width: 1600px
   height: 1600px
@@ -258,7 +261,7 @@ lubbock:
           Hear From a Student
         </a>
         <!-- Lightbox Testimonial Video -->
-        {% assign testimonial = page.lightbox_story %}
+        {% assign testimonial = page.lightbox_youtube %}
         <amp-lightbox
           id="testimonial-lightbox"
           class="lightbox"
@@ -268,18 +271,19 @@ lubbock:
           role="dialog"
         >
           <div class="w-75 mx-auto" style="margin-top: 100px">
-            <amp-video
-              width="600"
-              height="300"
+            <amp-youtube
+              data-videoid="{{ testimonial.src_id }}"
+              width="480"
+              height="270"
               on="tap:testimonial-lightbox.open"
               layout="responsive"
-              controls
               title="{{ testimonial.title }}"
             >
               <source src="{{ testimonial.src }}" type="video/mp4"/>
-            </amp-video>
+            </amp-youtube>
           </div>
-        </amp-lightbox>
+        </amp-lightbox
+        data-videoid="mGENRKrdoGY">
       </div>
     </div>
   </div>
