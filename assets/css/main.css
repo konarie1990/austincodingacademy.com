@@ -267,14 +267,31 @@ body, p {
 }
 
 /* filter over video */
-#hero-filter {
-  background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7));
-  opacity: 0.8;
-}
-
 #hero-index {
   background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-index.jpg');
   background-position: top;
+}
+
+@media (min-width: 768px) {
+  #hero-index {
+    background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7));
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+/* hero text positioning */
+.text-position {
+  top: 5%;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .text-position {
+    top: 20%;
+    left: 5%;
+  }
 }
 
 #hero-csharp {
