@@ -289,26 +289,6 @@ body, p {
   }
 }
 
-/* hero text positioning */
-.text-position {
-  top: 5%;
-  left: 0;
-}
-
-@media (min-width: 850px) and (max-width: 1024px) {
-  .text-position {
-    top: 15%;
-    left: 10%;
-  }
-}
-
-@media (min-width: 850px) {
-  .text-position {
-    top: 20%;
-    left: 5%;
-  }
-}
-
 #hero-csharp {
   background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-csharp.jpg');
   background-position: 50% 10%;
@@ -667,4 +647,26 @@ ul.share-buttons img {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
+}
+
+.z-0 {
+  z-index: 0;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-20 {
+  z-index: 20;
+}
+.z-30 {
+  z-index: 30;
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
+}
+.z-auto {
+  z-index: auto;
 }
