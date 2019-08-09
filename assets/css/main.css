@@ -26,16 +26,18 @@
   font-display: swap;
 }
 
-.fa, .far, .fas {
-  font-family: Font Awesome\5 Free;
+.fa,
+.far,
+.fas {
+  font-family: Font awesome\5 Free;
 }
 
 .fab {
-  font-family: Font Awesome\5 Brands;
+  font-family: Font awesome\5 Brands;
 }
 
 @font-face {
-  font-family: Font Awesome\5 Brands;
+  font-family: Font awesome\5 Brands;
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -49,7 +51,7 @@
 }
 
 @font-face {
-  font-family: Font Awesome\5 Free;
+  font-family: Font awesome\5 Free;
   font-style: normal;
   font-weight: 400;
   font-display: auto;
@@ -63,7 +65,7 @@
 }
 
 @font-face {
-  font-family: Font Awesome\5 Free;
+  font-family: Font awesome\5 Free;
   font-style: normal;
   font-weight: 900;
   font-display: auto;
@@ -190,7 +192,7 @@ p {
   .display-responsive {
     font-size: 2.5rem;
     font-weight: 300;
-    line-height: 1.2
+    line-height: 1.2;
   }
 }
 
@@ -237,7 +239,9 @@ p {
 
 /* HEADER LINKS */
 
-.nav-item a:hover, #sidebar a:hover, .cta-gradient:hover {
+.nav-item a:hover,
+#sidebar a:hover,
+.cta-gradient:hover {
   color: #ffffff;
   cursor: pointer;
 }
@@ -302,7 +306,7 @@ p {
 
 @media (min-width: 768px) {
   #hero-index {
-    background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7));
+    background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(45, 47, 119, 0.7));
     opacity: 0.8;
     position: absolute;
     width: 100%;
@@ -310,7 +314,8 @@ p {
 }
 
 #hero-csharp {
-  background: linear-gradient(rgba(45,47,119, 0.7), rgba(45,47,119, 0.7)), url('/assets/images/hero-csharp.jpg');
+  background: linear-gradient(rgba(45, 47, 119, 0.7), rgba(45, 47, 119, 0.7)),
+    url('/assets/images/hero-csharp.jpg');
   background-position: 50% 10%;
   background-size: cover;
 }
